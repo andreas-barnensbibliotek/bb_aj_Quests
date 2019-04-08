@@ -1,0 +1,37 @@
+﻿<div class="bb_aj_modalcontent" >
+    <div class="bb_aj_modalheader">
+		<div class="modalheadblock"><h3>{{Uppdrag}}</h3></div>
+		<div class="buttonblock">			
+			<a href="#" title="Stäng" class="bb_aj_closeModal"><img src="/DesktopModules/bb_aj_ModalContainer/images/Close.png" alt="Stäng" /></a>                              
+        </div>
+    </div>
+		
+    <div id="bb_aj_modalbody" class="bb_aj_modalbody" data-questid="{{QuestID}}" data-userid="{{Userid}}"
+	data-triggerid="{{Subquestlist.0.QtrigId}}" data-uquestid="{{UQuestID}}" data-svar="{{Subquestlist.0.TValue}}">
+		<div class="bekraftaModalbox">
+			<h2>Du har ett uppdrag att utföra! </h2>
+			<h3>Uppdrag är en del av uppdragen i huvuduppdraget: {{Uppdrag}}</h3>		
+			<h4>Utför updraget:</h4><h3> {{Subquestlist.0.TName}}</h3>							
+			<div class="container">
+  
+   
+  <div class="row">
+    <div class="col">  
+    </div>
+    <div class="col">
+      <input type="text" id="bb_aj_subquest"/>
+    </div>
+    <div class="col">
+      
+    </div>
+  </div>
+ </div>
+			
+			<div class="modbekraftabutton">			
+				<button id="bb_aj_doinputsubquest" class="bb_aj_closeModal">Utför uppdrag!</button>				
+			
+			</div>
+			
+		</div>
+    </div>
+</div>
