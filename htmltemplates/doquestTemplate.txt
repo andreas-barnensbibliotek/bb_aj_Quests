@@ -1,25 +1,29 @@
-﻿<div class="bb_aj_modalcontent" >
+﻿<div class="bb_aj_modalcontent">
     <div class="bb_aj_modalheader">
-		<div class="modalheadblock"><h3>{{Uppdrag}}</h3></div>
-		<div class="buttonblock">			
-			<a href="#" title="Stäng" class="bb_aj_closeModal"><img src="/DesktopModules/bb_aj_ModalContainer/images/Close.png" alt="Stäng" /></a>                              
+        <div class="modalheadblock"><h3>{{Uppdrag}}</h3></div>
+        <div class="buttonblock">
+            
         </div>
     </div>
-		
+
     <div id="bb_aj_modalbody" class="bb_aj_modalbody" data-questid="{{QuestID}}" data-userid="{{Userid}}"
-	data-triggerid="{{Subquestlist.0.QtrigId}}" data-uquestid="{{UQuestID}}" data-svar="{{Subquestlist.0.TValue}}">
-		<div class="bekraftaModalbox">
-			<h2>Bra jobbat! </h2>
-			<h2>Du har utfört uppdraget: {{{Subquestlist.0.TName}}}</h2>
-			<h3>Detta uppdrag är en del av uppdragen i huvuduppdraget: {{{Uppdrag}}}</h3>		
-			
-			<p>Klicka bekräfta för att slutfört deluppdraget! </p>
-						 
-			<div class="modbekraftabutton">			
-				<button id="bb_aj_dosubquest" class="bb_aj_closeModal">Bekräfta!</button>				
-			
-			</div>
-			
-		</div>
+         data-triggerid="{{Subquestlist.0.QtrigId}}" data-uquestid="{{UQuestID}}" data-svar="{{Subquestlist.0.TValue}}">
+        
+        <div class="bekraftaModalbox">
+            <div class="column_modal modal_left">
+			<img src="{{{QuestBadgeSrc}}}" title="Uppdragsmedalj" alt="Uppdragsmedalj">
+            </div>
+            <div class="column_modal modal_right" ">
+                <h2>Bra jobbat! </h2>
+                <p>Du är klar med: <span class="kk_aj_subuppdrag"> {{{Subquestlist.0.TName}}}</span></p>
+                <p>som är en del av: <span class="kk_aj_huvudbuppdrag"> {{{Uppdrag}}}</span></p>
+
+                <div class="modbekraftabutton">
+                    <button id="bb_aj_dosubquest" class="bb_aj_closeModal">Fortsätt!</button>
+
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>

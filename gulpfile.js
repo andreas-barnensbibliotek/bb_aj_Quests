@@ -56,7 +56,7 @@ gulp.task('styles', () => {
 			})
     )
         .pipe(sourcemaps.write())
-		.pipe(gulp.dest(srcPath.publik + '/public/css/'));
+		.pipe(gulp.dest(srcPath.publik + '/css/'));
 		
 });
 

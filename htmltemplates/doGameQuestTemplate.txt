@@ -2,7 +2,7 @@
     <div class="bb_aj_modalheader">
         <div class="modalheadblock"><h3>{{Uppdrag}}</h3></div>
         <div class="buttonblock">
-            <a href="#" title="Stäng" class="bb_aj_closeModal"><img src="/DesktopModules/bb_aj_ModalContainer/images/Close.png" alt="Stäng" /></a>
+            
         </div>
     </div>
 
@@ -10,24 +10,21 @@
          data-triggerid="{{Subquestlist.0.QtrigId}}" data-uquestid="{{UQuestID}}" data-svar="{{Subquestlist.0.TValue}}">
         
         <div class="bekraftaModalbox">
-			<div class="column_modal modal_left">
+            <div class="column_modal modal_left">
 			<img src="{{{QuestBadgeSrc}}}" title="Uppdragsmedalj" alt="Uppdragsmedalj">
             </div>
             <div class="column_modal modal_right" ">
-                <h2>Slutför uppdraget!</h2>
-				<div class="bb_aj_Svarat">                   			
-                </div>
-				<p>Svara nu på frågan:<br>
-                <b>{{{Subquestlist.0.TName}}}?</b>
-				<input type="text" id="bb_aj_subquest" /></p>
-				<button id="bb_aj_doinputsubquest" class="bb_aj_doinputsubquest">Svara!</button>
-				<div class="bb_aj_ErrMess">                   			
-                </div>
-				
                 
+				<h2>Bra jobbat! Du hittade detta uppdrag! </h2>
+                <p>Du måste nu jaga iväg draken för att utföra uppdraget:  <span class="kk_aj_subuppdrag"> {{{Subquestlist.0.TName}}}</span></p>
+                </p>
+
+                <div class="modbekraftabutton">
+                    <button id="bb_aj_doGamequest" class="bb_aj_closeModal">Fightas med draken!</button>
+
+                </div>
             </div>
 
         </div>
     </div>
 </div>
-

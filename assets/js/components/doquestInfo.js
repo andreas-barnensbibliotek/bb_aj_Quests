@@ -8,12 +8,12 @@ const questinfo = () => {
 	function showDoQuest(options, callback) {
 		let usehbtmplate = appsettings.handlebartemplate.hb_Doquestinfo_tmp;
 
-		if (options.hbtmpl === 'gametmpl') {
-			usehbtmplate = appsettings.handlebartemplate.hb_Doquestinfo_tmp;
-		}
-
 		if (options.hbtmpl === 'inputtmpl') {
 			usehbtmplate = appsettings.handlebartemplate.hb_doinputquest_tmp;
+		}
+
+		if (options.hbtmpl === 'gametmpl') {
+			usehbtmplate = appsettings.handlebartemplate.hb_doGamequest_tmp;
 		}
 
 		let requestdata = {
@@ -45,6 +45,21 @@ const questinfo = () => {
 		requestHandler.chkpost(requestdata, callback);
 	}
 
+	function getStatus(options, callback) {
+		let requestdata = {
+			apiurl: appsettings.api.questcommand.showQuest(),
+			postdata: {
+				Userid: options.Userid,
+				QuestID: options.QuestID,
+				QTriggerID: options.QTriggerID
+			}
+		};
+
+		requestHandler.chkpost(requestdata, data => {
+			callback(data);
+		});
+	}
+
 	function render(getdata, callback) {
 		requestHandler.doPost(getdata, data => {
 			callback(data);
@@ -53,7 +68,8 @@ const questinfo = () => {
 
 	return {
 		showDoQuest: showDoQuest,
-		DoTheQuest: DoTheQuest
+		DoTheQuest: DoTheQuest,
+		getStatus: getStatus
 	};
 };
 export default questinfo;
